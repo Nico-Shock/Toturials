@@ -1,0 +1,14 @@
+VM -> FreeBSD 64-bit (die neuste version)
+-> Advance Options -> Auto INstall Species Harddisk
+-> ISO Enternen dann "Reboot" als Option
+-> Erste Option wählen -> "E" für Edit -> Pfeil Taste nach Links
+-> quiet -> nomodeset xforcevesa -> Enter
+-> Das erste + B -> Booten
+(bei boot logo alt + F1 für Console)
+mkdir /mnt/sda/
+mount /dev/block/sda1 /mnt/sda
+vi /mnt/sda/grub/menu.listd
+-> quiet (ganz oben bei "title Android-x86... ohne klammern) -> nomodeset xforcevesa -> Enter
+:wq!
+reboot
+-> Normales Setup

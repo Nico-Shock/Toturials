@@ -1,0 +1,4 @@
+set_COMPAT_LAYER=RunAsInvoker
+Start Name
+
+(speichern mit den Namen als .bat)

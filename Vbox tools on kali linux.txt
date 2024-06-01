@@ -1,0 +1,10 @@
+sudo apt install linux-headers-$(uname -r) build-essential dkms
+
+add VBOX guest ISO Installer
+open terminal in cd-drive -> copy all to virtual hard drive
+
+chmod 755 /root/VBoxLinuxAdditions.run 
+
+cd / root 
+
+./VBoxLinuxAdditions.run 

@@ -1,0 +1,17 @@
+1.wsl --install (in admin. Powershell)
+2.sudo apt update
+3.sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
+4.kvm-ok
+5.sudo apt install cpu-checker
+6.sudo systemctl status libvirtd
+7.sudo systemctl enable libvirtd.service
+8.sudo systemctl start libvirtd.service
+9.sudo adduser $USER kvm
+10.sudo adduser $USER libvirt
+11.virsh edit Name (der VM) suche nach <vcpu placement='static'>2</vcpu> (und ändere die zahl für vcpus)
+
+Zum Deinsterllieren:
+1.sudo apt remove cpu-checker
+2.sudo apt remove qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
+
+

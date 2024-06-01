@@ -1,0 +1,44 @@
+Enable Automatic Updates:
+
+1. sudo apt install unattended-upgrades
+2. sudo dpkg-reconfigure --priority=low unattended-upgrades
+
+Better than Passwords:
+
+1. mkdir ~/.ssh && chmod 700 ~/.ssh
+2. exit/logout
+3. ssh-keygen -b 8192
+4. cd .ssh
+5. scp $env:USERPROFILE/.ssh/id_rsa.pup username@ipaddres:~/.ssh/authorized_keys
+6. login to ssh
+
+lockdown logins:
+
+1. sudo nano /etc/ssh/sshd_config
+2. Enable Port + change Port
+3. Enable AddressFamaly any
+4. change any to inet
+5. change PermitRootLogin to no
+6. change PasswortAuthentication to no
+7. sudo systemctl restart sshd
+8. Login to SSH on another terminal with the additional comand "-p 123" (newport)
+
+Firewall:
+
+1. sudo apt install ufw
+2. sudo ufw allow 123 (newport)
+3. sudo ufw status
+4. sudo ufw enable
+
+Disable Ping:
+
+1. sudo nano /etc/ufw/before.rules
+2. Add the Line "-A ufw-before-input -p icmp --icmp-type echo-request -j DROP" under ok icmp codes for INPUT
+3. sudo ufw reload
+4. sudo reboot now
+
+Extras:
+
+sudo apt install apache2 && sudo systemctl start apache2
+sudo ss -tupln
+sudo ufw allow 80/tcp

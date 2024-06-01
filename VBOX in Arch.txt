@@ -1,0 +1,1 @@
+sudo pacman -S virtualbox-host-modules-arch virtualbox virtualbox-guest-iso && sudo modprobe vboxdrv

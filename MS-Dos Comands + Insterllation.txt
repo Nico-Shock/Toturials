@@ -1,0 +1,32 @@
++Floppy Disk -> MS-DOS Disk01 -> 13 xMillion next
+Change Flopy -> MS-DOS Disk02 -> Remove Disk01 -> Disconect CD Drive
+Add-Ons = Cancel no (x3)
++Main Disk01 (nach MS-DOS boot)
+a:\ -> setup
++Main Disk02
+Das Setup machen
++Main Disk03
++Main Disk04
++Main Disk05
++Main Disk06
+Cancel -> Skip -> Remove Disk -> Reboot -> Shutdown -> MS-DOS
++SVGA.flp
+md svga
+cd svga
+copy a:\ c:\svga
+svga
+vgapatch p -> win
+-start setup
+change system settings -> Letze Option -> ändern zu -> C:\SVGA -> 1024x768
++Sound Blaster 16.fpl -> MS-DOS
+md sounds
+cd c:\sounds
+copy a:\ c:\sounds
+install -> Enter 13000 mal
+Remove Sound Blaster 16.fpl
+win
+
+
+
+
+

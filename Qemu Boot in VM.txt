@@ -1,0 +1,7 @@
+qemu-img.exe create -f qcow2 Name.img Speicher(M,G,T)                                Env
+                       
+
+qemu-system-x86_64.exe -cdrom Name.iso -boot menu=on -drive file=Name.img -smp 4 (cpu kerne) -cpu host -m 8192 (mit 1024 mal nehmen.)
+
+
+qemu-system-x86_64 -m 8192 -smp cores=2 -boot menu=on -cdrom Name.iso -drive file=Name.img

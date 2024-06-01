@@ -1,0 +1,7 @@
+https://please.hackmii.com/
+
+privat + boot.elf -> SD
+
+-> Wii -> Messages -> Letterbomb
+
+->BootMii Installer -> Install Homebrew

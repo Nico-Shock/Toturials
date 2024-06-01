@@ -1,0 +1,25 @@
+For Intel Processor
+cd "C:\Program Files\Oracle\VirtualBox\" 
+VBoxManage.exe modifyvm "VM Name" –-cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage setextradata "VM Name" VBoxInternal/Devices/efi/0/Config/DmiSystemProduct “MacBookPro15,1”
+VBoxManage setextradata "VM Name" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Mac-551B86E5744E2388"
+VBoxManage setextradata "VM Name" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
+VBoxManage setextradata "VM Name" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
+
+For AMD Processor
+cd "C:\Program Files\Oracle\VirtualBox\" 
+VBoxManage.exe modifyvm "MacOS 14 Sonoma" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff 
+VBoxManage setextradata "MacOS 14 Sonoma" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "iMac11,3" 
+VBoxManage setextradata "MacOS 14 Sonoma" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0" 
+VBoxManage setextradata "MacOS 14 Sonoma" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Iloveapple" 
+VBoxManage setextradata "MacOS 14 Sonoma" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc" 
+VBoxManage setextradata "MacOS 14 Sonoma" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
+VBoxManage modifyvm "MacOS 14 Sonoma" --cpu-profile "Intel Core i7-6700K"
+
+
+
+
+VBoxManage setextradata "MacOS 14 Sonoma" "VBoxInternal/TM/TSCMode" "RealTSCOffset"
+
+
+VBoxManage setextradata “MacOS 11 Big Sur” VBoxInternal2/EfiGraphicsResolution 1920x1080

@@ -1,0 +1,1 @@
+sudo pacman -S qemu-full virt-manager bridge-utils libguestfs dnsmasq vde2 openbsd-netcat && sudo systemctl enable libvirtd && sudo systemctl start libvirtd

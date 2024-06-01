@@ -1,0 +1,22 @@
+Download + Install:
+1.https://visualstudio.microsoft.com/de/downloads/
+2.https://cmake.org/download/
+3.https://vulkan.lunarg.com/sdk/home#windows
+4.https://git-scm.com/download
+
+powershell (in den Order wo man es rein kopieren möchte) -> git clone --recursive https://gitlab.com/suyu-emu/suyu 
+powershell -> cd .\suyu\
+powershell -> mkdir build
+
+Start Cmake
+-> Wähle den Suyu Ordner der durchs klonen erstellt wurde (bei "Where is the source code")
+-> Wähle in Suyu Ordner den "Build" Ordner aus (bei "Where to build the binaries")
+-> Configure -> x64 -> finish
+-> Generate
+-> Open Project
+
+Visual Studio
+-> Debug -> Release
+-> Solution -> Build Solution
+
+-> suyu -> build -> bin -> Release -> Suyu.exe
