@@ -1,0 +1,1 @@
+sudo dnf groupinstall "KDE Plasma Workspaces" && sudo dnf install sddm && sudo systemctl enable sddm && sudo systemctl disable gdm && sudo systemctl set-default graphical.target && sudo reboot
