@@ -1,0 +1,1 @@
+sudo pacman -S gnome gnome-extra gdm && sudo systemctl enable gdm && sudo pacman -S gnome-shell-extensions gnome-tweaks flatpak
