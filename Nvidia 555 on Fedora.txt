@@ -1,0 +1,46 @@
+sudo nano /etc/dnf/dnf.conf -> add= max_parallel_downloads=20
+                                    fastestmirror=True
+
+sudo dnf copr enable bieszczaders/kernel-cachyos
+sudo dnf install kernel-cachyos kernel-cachyos-devel-matched
+sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+
+koji.fedoraproject.org/koji/buildinfo?buildID=2452001 (on Fedora 41) -> xorg-x11-server-Xwayland-24.1.0-1.fc41.x86_64.rpm  + xorg-x11-server-Xwayland-devel-24.1.0-1.fc41.x86_64.rpm (x86_64)
+koji.fedoraproject.org/koji/buildinfo?buildID=2454569 (on Fedora 40) -> ""
+cd Downloads
+sudo dnf in '/home/user/Downloads/xorg-x11-server-Xwayland-24.1.0-1.fc41.x86_64.rpm '/home/user/Downloads/xorg-x11-server-Xwayland-devel-24.1.0-1.fc41.x86_64.rpm
+
+uname -r
+
+koji.fedoraproject.org/koji/buildinfo?buildID=2369421 (on Fedora 40) -> egl-wayland-1.1.13-3.fc40.x86_64.rpm + egl-wayland-devel-1.1.13-3.fc40.x86_64.rpm (x86_64)
+koji.fedoraproject.org/koji/buildinfo?buildID=2454569 (on Fedora 41) -> ""
+
+sudo dnf in '/home/user/Downloads/egl-wayland-1.1.13-3.fc40.x86_64.rpm '/home/user/Downloads/egl-wayland-devel-1.1.13-3.fc40.x86_64.rpm
+
+sudo dnf install kernel-devel kernel-headers gcc make dkms acpid libglvnd-glx libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig xord-x11-server-Xwayland libxcb
+
+Download -> https://www.nvidia.de/content/DriverDownloads/confirmation.php?url=/XFree86/Linux-x86_64/550.54.14/NVIDIA-Linux-x86_64-550.54.14.run&lang=de&type=geforcem
+
+sudo -si
+cd /home/user/Downloads
+chmod +x NVIDIA-Linux-x86_64-550.54.14.run
+./NVIDIA-Linux-x86_64-550.54.14.run -> NVIDIA Proprietary -> Continue Installation -> OK -> OK -> Continue Installation -> Yes -> Yes -> Rebuild initramfs -> No -> OK -> OK
+
+sudo dracut -f --kver 6.9.2-cb1.0.fc40.x86_64 --add-drivers nvidia --add-drivers nvidia_uvm --add-drivers nvidia-drm (Die Insterllierte version nehmen bei Fedora 41 ist es 41 nicht 40)
+
+Download -> https://github.com/CachyOS/CachyOS-Settings
+cp "etc + usr"
+Fedora Linux Drive -> Open Folder as Root
+paste the files
+
+sudo reboot
+
+sudo nano /etc/default/grub -> Add: nvidia-drm.modset=1" to amd_pstate=active
+sudo nano /usr/lib/modprobe.d/nvidia.conf -> Add: NVreg_PreserveVideoMemoryAllocations=1
+
+sudo -i
+dracut -f --regenerate-all
+
+sudo dnf in sddm
+systemctl disable gdm
+systemctl enable sddm
