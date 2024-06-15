@@ -17,7 +17,7 @@ koji.fedoraproject.org/koji/buildinfo?buildID=2454569 (on Fedora 41) -> ""
 
 sudo dnf in '/home/user/Downloads/egl-wayland-1.1.13-3.fc40.x86_64.rpm '/home/user/Downloads/egl-wayland-devel-1.1.13-3.fc40.x86_64.rpm
 
-sudo dnf install kernel-devel kernel-headers gcc make dkms acpid libglvnd-glx libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig xord-x11-server-Xwayland libxcb
+sudo dnf install kernel-devel kernel-headers gcc make dkms acpid libglvnd-glx libglvnd-glx libglvnd-opengl libglvnd-devel pkgconfig xorg-x11-server-Xwayland libxcb
 
 Download -> https://www.nvidia.de/content/DriverDownloads/confirmation.php?url=/XFree86/Linux-x86_64/550.54.14/NVIDIA-Linux-x86_64-550.54.14.run&lang=de&type=geforcem
 
