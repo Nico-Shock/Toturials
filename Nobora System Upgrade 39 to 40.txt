@@ -1,0 +1,4 @@
+sudo nano /etc/dnf/dnf.conf -> add: max_parallel_downloads=20 + fastestmirror=True
+sudo dnf in dnf-plugin-system-upgrade -y
+sudo dnf system-upgrade download --releasever=40 -y
+sudo dnf system-upgrade reboot
