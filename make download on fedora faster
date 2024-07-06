@@ -1,0 +1,1 @@
+sudo nano /etc/dnf/dnf.conf -> add: max_parallel_downloads=20 + fastestmirror=True
